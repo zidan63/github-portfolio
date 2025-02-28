@@ -20,7 +20,7 @@ function HeroSection({ profile }) {
               width={128}
               height={128}
               alt={profile.name}
-              className="rounded-full transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
+              className="rounded-full transition-all duration-1000 hover:grayscale-0 hover:scale-110 cursor-pointer"
             />
           </div>
           <p className="text-gray-300 text-sm lg:text-base my-4 lg:my-6 text-center">
@@ -35,13 +35,13 @@ function HeroSection({ profile }) {
             >
               <BsGithub size={24} />
             </Link>
-            <Link
+            {/* <Link
               href={userData.linkedIn}
               target='_blank'
               className="transition-all text-teal-500 hover:scale-125 duration-300"
             >
               <BsLinkedin size={24} />
-            </Link>
+            </Link> */}
             <Link
               href={userData.facebook}
               target='_blank'
@@ -49,29 +49,29 @@ function HeroSection({ profile }) {
             >
               <FaFacebook size={24} />
             </Link>
-            <Link
+            {/* <Link
               href={userData.leetcode}
               target='_blank'
               className="transition-all text-teal-500 hover:scale-125 duration-300"
             >
               <SiLeetcode size={24} />
-            </Link>
-            <Link
+            </Link> */}
+            {/* <Link
               href={userData.twitter}
               target='_blank'
               className="transition-all text-teal-500 hover:scale-125 duration-300"
             >
               <FaTwitterSquare size={24} />
-            </Link>
+            </Link> */}
           </div>
 
           <div className="w-full justify-center flex items-center gap-3 mt-6">
-            <Link target="_blank" href={userData.resume} className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600">
+            {/* <Link target="_blank" href={userData.resume} className="bg-gradient-to-r to-pink-500 from-violet-600 p-[1px] rounded-full transition-all duration-300 hover:from-pink-500 hover:to-violet-600">
               <button className="px-3 text-xs md:px-4 py-2 md:py-2.5 bg-[#0d1224] rounded-full border-none text-center font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out  md:font-semibold flex items-center gap-1 hover:gap-3">
                 <span>Get Resume</span>
                 <MdDownload size={16} />
               </button>
-            </Link>
+            </Link> */}
           </div>
 
         </div>
@@ -147,7 +147,7 @@ function HeroSection({ profile }) {
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">hireable:</span>
-                <span className="text-orange-400">{profile?.hireable.toString()}</span>
+                <span className="text-orange-400">{profile?.hireable ? profile.hireable.toString() : "N/A"}</span>
                 <span className="text-gray-400">,</span>
               </div>
               <div><span className="text-gray-400">{`};`}</span></div>
